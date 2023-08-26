@@ -29,12 +29,6 @@ then
     ARGS="$ARGS --print-issued-lines=false"
 fi
 
-# do not return an error when issues are found
-if [[ "$*" != *"--issues-exit-code"* ]];
-then
-    ARGS="$ARGS --issues-exit-code=0"
-fi
-
 # the platforms to use if PLATFORM is not set
 DEFAULT_PLATFORMS=(
     "linux/amd64"
